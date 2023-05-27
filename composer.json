@@ -1,0 +1,36 @@
+{
+  "name": "llpddone/selectel-transmitter",
+  "description": "File transmitter to selectel",
+  "type": "library",
+  "require": {
+    "php": "^7.2 || ^8.0",
+    "laravel/framework": "^10.0 || ^9.0 || >=8.40.0 || ^7.0",
+    "ext-curl": "*"
+  },
+  "license": "proprietary",
+  "authors": [
+    {
+      "name": "LLPDDone",
+      "email": "llpddone@gmail.com"
+    }
+  ],
+  "minimum-stability": "dev",
+  "autoload": {
+    "psr-4": {
+      "SelectelTransmitter\\": "src/SelectelTransmitter/"
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "SelectelTransmitter\\ServiceProvider"
+      ],
+      "aliases": {
+          "SelectelTransmitter": "SelectelTransmitter\\Facade"
+      }
+    }
+  },
+  "require-dev": {
+    "orchestra/testbench": "^3.8"
+  }
+}
